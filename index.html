@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RNGuesser</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./p_letter.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <h1>Guess the Random Number</h1> -->
+    <div class="container">
+      <!-- numbers area ------------------------------------------- -->
+      <div class="numbers">
+        <div class="row1">
+          <button id="nr1" class="button">1</button
+          ><button id="nr2" class="button">2</button
+          ><button id="nr3" class="button">3</button>
+        </div>
+        <div class="row2">
+          <button id="nr4" class="button">4</button
+          ><button id="nr5" class="button">5</button
+          ><button id="nr6" class="button">6</button>
+        </div>
+        <div class="row3">
+          <button id="nr7" class="button">7</button
+          ><button id="nr8" class="button">8</button
+          ><button id="nr9" class="button">9</button>
+        </div>
+        <div class="row4">
+          <button id="nr0" class="button">0</button
+          ><button id="go" class="button">GO!</button>
+        </div>
+      </div>
+
+      <!-- instructions and input field ---------------------------- -->
+      <div class="instruction-textField">
+        <!-- instructions and history ---------------------------- -->
+        <div class="history">
+          <div id="texttext">
+            <h2>
+              Guess a number from <br> 1 to 100
+            </h2>
+            <h2 id="target-for-history"></h2>
+          </div>
+        </div>
+        <!-- input field area ------------------------------------ -->
+        <div class="input-field">
+          <input
+            type="number"
+            id="numInput"
+            name="numInput"
+            min="0"
+            max="100"
+            maxlength="3"
+            oninput="limitInput(this)"
+            autofocus
+          />
+          <button class="button" id="clear">X</button>
+        </div>
+      </div>
+      
+    </div>
+    <div id="end" class="hide"><button class="refresh" onclick="location.reload();">Try again</button></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
