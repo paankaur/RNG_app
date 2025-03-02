@@ -1,6 +1,9 @@
 html {
     font-family: 'Roboto', sans-serif;
   }
+body{
+    margin: 0;
+}
 h1{
     text-align: center;
     margin-top: 50px;
@@ -146,5 +149,8 @@ background: linear-gradient(to right, hsl(23, 32%, 60%) 5%, hsl(18, 68%, 55%) 49
 .container {
     flex-direction: column;
     margin-top: 0;
+}
+.numbers{
+    margin-right: 0px;    
 }
 }

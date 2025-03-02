@@ -78,9 +78,21 @@ add0.addEventListener("click", () => {
   }
 });
 
-document.getElementById("clear").addEventListener("click", () => {
-  text.value = "";
+
+
+const clearButton = document.getElementById("clear");
+
+clearButton.addEventListener("click", clearText);
+text.addEventListener("keydown", (event) => {
+  if (event.key === "Backspace") {
+    clearText();
+  }
 });
+
+function clearText() {
+  text.value = "";
+}
+
 
 const go = document.getElementById("go");
 const end = document.getElementById("end");
@@ -117,7 +129,16 @@ function guessTheNumber(guess) {
   };
 }
 
-go.addEventListener("click", () => {
+
+
+go.addEventListener("click", handleGuess);
+text.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleGuess();
+  }
+});
+
+function handleGuess() {
   if (!text.value) {
     return;
   }
@@ -127,4 +148,4 @@ go.addEventListener("click", () => {
 
   text.value = "";
   console.log(attempts);
-});
+}
