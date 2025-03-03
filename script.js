@@ -118,7 +118,7 @@ function guessTheNumber(guess) {
     history.innerHTML =
       "<br/>" +
       attempts +
-      " attempts should be enough to guess a random number in this range.";
+      " attempts should be enough to guess a random number in this range. The number was: " + randomNumber;
     go.classList.add("hide");
     end.classList.add("end");
   } else if (guess !== randomNumber && guess < randomNumber) {
